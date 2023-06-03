@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    tools:context=".Fragment.HistoryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="530sp"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="1sp"
+            android:paddingTop="1sp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/design_listviewhistory"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHistory"
+            app:layout_constraintVertical_bias="0.103" />
+
+        <TextView
+            android:id="@+id/textHistory"
+            android:background="@drawable/design_listviewhistory"
+            android:layout_width="128dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="История"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/removeAllHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@color/white"
+            android:clickable="true"
+            android:src="@drawable/remove_picture"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerview"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

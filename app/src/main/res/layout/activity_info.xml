@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/red"
+    android:layout_height="match_parent"
+    tools:context=".Activityapp.InfoActivity">
+
+
+    <TextView
+        android:id="@+id/infotmation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/design_listviewhistory"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Информация о видео"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/view_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview"
+        app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/web_view"
+        android:layout_width="369dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infotmation_text" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="374dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/design_info_video"
+        android:foregroundGravity="center"
+        android:paddingTop="1sp"
+        android:paddingBottom="1sp"
+        android:scrollbarSize="3dp"
+        android:paddingRight="1sp"
+        android:paddingLeft="1sp"
+        app:layout_constraintEnd_toEndOf="@+id/web_view"
+        app:layout_constraintStart_toStartOf="@+id/web_view"
+        app:layout_constraintTop_toBottomOf="@+id/web_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="1sp">
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Подождите....."
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/design_imagevideo"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/design_imagevideo"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/design_imagevideo"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/design_imagevideo"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/design_imagevideo"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
